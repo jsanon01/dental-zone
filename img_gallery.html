@@ -1,44 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Flex Box Image Gallery</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
+    <head>
+        <title>Flex Box Image Gallery</title>
+        <style>
+
+        h1 {
+        text-align: center;
+        color: blue;
         }
-.flex-container {
-    display: flex;
-    height: 100%;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    background: dodgerblue;
-}
-.flex-container > div {
-    max-width: 400px;
-    margin: auto;
+
+        body {
+        margin: 0;
+        padding: 0;
+        }
+
+        .flex-container {
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        background: lightblue;
+        }
+
+        .flex-container > div {
+        max-width: 400px;
+        margin: auto;
+        }
+
+        img {
+        width: 100%;
+        height: 300px;
+        margin: 3px;
+        padding: 5px;
+        /*    border: 2px dotted white;
+        */}
+        .responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
 }
 
-img {
+@media only screen and (max-width: 700px){
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .responsive {
     width: 100%;
-    height: 300px;
-    margin: 5px;
-    padding: 5px;
-    border: 2px dotted white;
+  }
 }
-
-    </style>
-
-</head>
-<body>
-    <div class="flex-container">
-        <div><img src="dental_sign.png"></div>
-        <div><img src="fancy_sign.png"></div>
-        <div><img src="front_store.png"></div>
-        <div><img src="inside.png"></div>
-        <div><img src="smiling_faces.png"></div>
-        <div><img src="crew.png"></div>
-        <div><img src="crew.png"></div>
-        <div><img src="crew.png"></div>
-</body>
+        </style>
+    </head>
+    <h1> Dental Zone Gallery Photos</h1>
+    <body>
+        <div class="flex-container">
+            <div><img src="crew.png"></div>
+            <div><img src="fancy_sign.png" alt="fancy sign"></div>
+            <div><img src="dental_sign.png" alt="dental zone"></div>
+            <div><img src="inside.png"></div>
+            <div><img src="front_store.png"></div>
+            <div><img src="child-dental-care.png"></div>
+        </div>
+    </body>
 </html>
